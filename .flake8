@@ -1,0 +1,27 @@
+[flake8]
+max-line-length = 88
+max-complexity = 10
+select = E,W,F,C
+ignore =
+    # E203: whitespace before ':' (conflicts with black)
+    E203,
+    # E501: line too long (handled by black)
+    E501,
+    # W503: line break before binary operator (conflicts with black)
+    W503
+exclude =
+    .git,
+    __pycache__,
+    .direnv,
+    .pytest_cache,
+    .mypy_cache,
+    htmlcov,
+    build,
+    dist,
+    .tox
+
+per-file-ignores =
+    # Tests can have long lines, more complex functions, and exec-imported functions
+    tests/*:E501,C901,F821
+    # Main script might need longer functions temporarily
+    decompose-vector.py:C901

@@ -1,0 +1,20 @@
+# Development dependencies for decompose-vector
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+pytest-mock>=3.11.0
+
+# CLI Framework
+click>=8.1.0
+rich>=13.0.0  # For better CLI output and progress bars
+
+# Code Quality
+black>=23.7.0
+flake8>=6.0.0
+mypy>=1.5.0
+pre-commit>=3.4.0
+
+# Development utilities
+tox>=4.11.0
+pip-tools>=7.3.0
